@@ -1,13 +1,16 @@
-
-import React from "react";
-import './../styles/App.css';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import LoremIpsum from './components/LoremIpsum';
 
 const App = () => {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+    <Provider store={store}>
+      <div className="App">
+        <LoremIpsum />
+      </div>
+    </Provider>
+  );
+};
 
-export default App
+export default App;
